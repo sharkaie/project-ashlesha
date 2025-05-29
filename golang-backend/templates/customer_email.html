@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Your Purchase</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Jost', sans-serif;
+            background-color: #f9f9f9; /* Neutral background */
+            margin: 0;
+            padding: 0;
+        }
+        .email-container {
+            max-width: 700px;
+            margin: 30px auto;
+            background: #ffffff;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .header {
+            background: #222; /* Dark contrasting header */
+            color: #ffffff;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .header::after {
+            content: '';
+            position: absolute;
+            border-top: 0.6em solid #d4af37;
+            bottom: -28px;
+            left: 0;
+            width: 100%;
+            height: 45px;
+            background: white;
+            border-radius: 50% 0 0 0;
+        }
+        .body {
+            padding: 30px 20px;
+            color: #333333;
+        }
+        .body h2 {
+            margin-top: 0;
+            font-size: 22px;
+            color: #d4af37;
+            font-weight: 500;
+        }
+        .body p {
+            line-height: 1.6;
+            margin: 15px 0;
+            font-weight: 400;
+        }
+        .order-details {
+            margin: 25px 0;
+        }
+        .order-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .order-table th, .order-table td {
+            padding: 15px 20px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        .order-table th {
+            background: #d4af37;
+            color: #ffffff;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        .order-table td {
+            color: #333333;
+            font-weight: 400;
+            background: #ffffff;
+        }
+        .button-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 25px;
+            background: #d4af37;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            text-transform: uppercase;
+            border-radius: 8px;
+            letter-spacing: 0.05em;
+        }
+        .button:hover {
+            background: #b78628;
+        }
+        .footer {
+            background: #222;
+            color: #ffffff;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+        }
+        .footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 0;
+            width: 100%;
+            height: 40px;
+            background: #ffffff;
+            border-bottom: 0.6em solid #d4af37;
+            border-radius: 0 0 50% 0; /* Inverted curve for the full border */
+        }
+    </style>
+</head>
+<body>
+<div class="email-container">
+    <!-- Header Section -->
+    <div class="header">
+        <h1>Thank You for Your Purchase!</h1>
+    </div>
+
+    <!-- Body Section -->
+    <div class="body">
+        <h2>Dear {{.FullName}},</h2>
+        <p>We are delighted to confirm your order with Ashlesha Jewells. Here are the details of your purchase:</p>
+
+        <!-- Order Details -->
+        <div class="order-details">
+            <table class="order-table">
+                <thead>
+                <tr>
+                    <th>Order Details</th>
+                    <th>Information</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><strong>Order ID:</strong></td>
+                    <td>{{.OrderID}}</td>
+                </tr>
+                <tr>
+                    <td><strong>Total Amount:</strong></td>
+                    <td>₹{{.TotalPrice}}</td>
+                </tr>
+                <tr>
+                    <td><strong>Product:</strong></td>
+                    <td>{{.ProductName}}</td>
+                </tr>
+                <tr>
+                    <td><strong>Quantity:</strong></td>
+                    <td>{{.Quantity}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Thank You Message -->
+        <p>Thank you for choosing Ashlesha Jewells to celebrate your precious moments. If you have any questions or need assistance, don't hesitate to contact us.</p>
+
+        <!-- Button Section -->
+        <div class="button-container">
+            <a href="mailto:info@ashleshajewells.com" class="button">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>© 2025 Ashlesha Jewells. All rights reserved.</p>
+        <p>Your Trusted Diamond Partner</p>
+    </div>
+</div>
+</body>
+</html>

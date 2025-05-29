@@ -1,0 +1,16 @@
+database:
+  url: "postgres://ashleshadbuser:Ehsaas@2718@3.7.15.82:5433/ashleshajewells"
+# url: "postgres://postgres:Ehsaas@2718@localhost:5432/ashleshajewells"
+#   url: "postgres://postgres:Ved%40%232104@localhost:5432/ashleshajewells"
+
+email:
+  smtp_host: "smtp.gmail.com"
+  smtp_port: 587
+  sender_email: "no-reply@ashleshajewells.com"
+  sender_password: "lxyi kbcw wscb gimc"
+
+payment:
+  key_id: "rzp_test_HLSMEz7sNxIed9"
+  key_secret: "oHEYzx0ltVOZyaQfBuG66fyu"
+  webhook_secret: "-BdQb9ScJ8Mx:PX"
+

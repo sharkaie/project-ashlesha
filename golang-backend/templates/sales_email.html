@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Order Received</title>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Jost', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    .email-container {
+      max-width: 600px;
+      margin: 30px auto;
+      background: #ffffff;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .header {
+      background: linear-gradient(135deg, #d4af37, #b78628);
+      color: #ffffff;
+      text-align: center;
+      padding: 25px 20px;
+      border-bottom-left-radius: 50px;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .body {
+      padding: 25px 20px;
+      line-height: 1.6;
+    }
+    .body h2 {
+      margin-top: 0;
+      font-size: 20px;
+      color: #d4af37;
+      font-weight: 500;
+    }
+    .order-details {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      font-size: 14px;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+    .order-details th, .order-details td {
+      padding: 15px 20px;
+      text-align: left;
+    }
+    .order-details th {
+      background: #d4af37;
+      color: #ffffff;
+      font-weight: 600;
+      text-transform: uppercase;
+      border-bottom: 2px solid #b78628;
+    }
+    .order-details td {
+      background: #f8f8f8;
+      color: #444;
+      border-bottom: 1px solid #ddd;
+    }
+    .order-details tr:last-child td {
+      border-bottom: none;
+    }
+    .order-details td:first-child {
+      font-weight: 500;
+      color: #333;
+    }
+    .highlight {
+      background: #fdf6e3;
+      color: #d4af37;
+      font-weight: 700;
+      border-radius: 8px;
+      padding: 4px 8px;
+    }
+    .footer {
+      background: #f8f8f8;
+      color: #555;
+      text-align: center;
+      padding: 20px 20px;
+      font-size: 14px;
+      line-height: 1.4;
+      border-top: 2px solid #d4af37;
+    }
+    .footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+<div class="email-container">
+  <!-- Header Section -->
+  <div class="header">
+    <h1>New Order Received</h1>
+  </div>
+
+  <!-- Body Section -->
+  <div class="body">
+    <h2>Order Details:</h2>
+    <table class="order-details">
+      <tbody>
+      <tr>
+        <th>Customer Name</th>
+        <td>{{.FullName}}</td>
+      </tr>
+      <tr>
+        <th>Email</th>
+        <td>{{.Email}}</td>
+      </tr>
+      <tr>
+        <th>Phone</th>
+        <td>{{.Phone}}</td>
+      </tr>
+      <tr>
+        <th>Order ID</th>
+        <td>{{.OrderID}}</td>
+      </tr>
+      <tr>
+        <th>Total Amount</th>
+        <td><span class="highlight">₹{{.TotalPrice}}</span></td>
+      </tr>
+      <tr>
+        <th>Product</th>
+        <td>{{.ProductName}}</td>
+      </tr>
+      <tr>
+        <th>Quantity</th>
+        <td>{{.Quantity}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Footer Section -->
+  <div class="footer">
+    <p>Order received via Ashlesha Jewells Website</p>
+  </div>
+</div>
+</body>
+</html>
